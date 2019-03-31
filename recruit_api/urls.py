@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from manage_account.urls import router as account_router
+from manage_account.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(account_router.urls)),
+    path('api/signup', SignUpViewSet.as_view())
 ]
