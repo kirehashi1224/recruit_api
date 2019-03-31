@@ -22,5 +22,6 @@ from manage_account.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(account_router.urls)),
-    path('api/signup', SignUpViewSet.as_view())
+    path('api/signup', SignUpViewSet.as_view()),
+    path('api/close', CloseViewSet.as_view())
 ]
